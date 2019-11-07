@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <a href="TH4.html" style="float: left; font-size: 35px; font-weight: bold; margin-left:50px ;">trước</a>
+        <a href="TH4-2.html" style="float: right; font-size: 35px; font-weight: bold; margin-right:50px ;">sau</a>
+        <h1 align="center"> Thực hành: Luyện tập với cấu trúc switch-case bài 1 </h1>
+        <p>hiển thị số</p>
+        <input type="text" id="nhapso">
+        <button type="button" onclick="show();">hiển thị số</button>
+        <script>
+            function show() {
+                let a = document.getElementById('nhapso').value;
+                    switch (a) {
+                        case '0':
+                            alert(0);
+                            break;
+                        case '1':
+                            alert(1);
+                            break;
+                        case '2':
+                        case '3':
+                            alert('2,3');
+                            break;
+                    }
+            }
+                
+        </script>
+</body>
+</html>

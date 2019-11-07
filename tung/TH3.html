@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Thực hành: Luyện tập với cấu trúc if...else...if</h1>
+
+        <form>
+            <input type="text" name="" id="username"> <br>
+            <input type="text" name="" id="password"><br>
+            <button onclick="login()">Đăng nhập</button>
+        </form>
+    <script>
+        function login() {
+            let userName = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+
+            if (userName == 'Admin' && password == 'TheMaster' ) {
+                document.write('Welcome');
+                } else if ( userName == 'null' && password == 'null' ) {
+                    document.write('Canceled');
+                } else if ( userName == 'Admin' && password != 'TheMaster' ) {
+                    document.write('Wrong password');
+                }    
+            else {
+                document.write('i do not know you');
+            }
+        }
+    </script>
+</body>
+</html>
