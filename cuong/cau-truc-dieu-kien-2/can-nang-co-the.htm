@@ -25,7 +25,7 @@
     <span id="bmi"></span>
     <script>
         function bmi() {
-            let weight = parseInt(document.getElementById("kg").value);
+            let weight = parseFloat(document.getElementById("kg").value);
             let height = parseFloat(document.getElementById("m").value);
             let height2 = height * height;
             let bmi = weight / height2;
