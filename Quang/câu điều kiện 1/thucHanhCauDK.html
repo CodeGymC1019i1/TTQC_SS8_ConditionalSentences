@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành về câu điều kiện 1</title>
+</head>
+<body>
+<!--Test lần 1-->
+<b>Enter the year</b>
+<input type="number" id="enterTheYear">
+<button onclick="Contens()">Send</button>
+<br/>
+<!--Test lần 2-->
+<b>Enter the year 2</b>
+<input type="number" id="enterTheYear2">
+<button onclick="Contens2()">Send 2</button>
+<br/>
+<!--Test lần 3-->
+<b>What is the “official”?</b>
+<input type="text" id="whatIsThe">
+<button onclick="giatri()">Send 3</button>
+<br/>
+<!--Test lan 4-->
+<b>Tên đăng nhập</b><br/>
+UserName:<input type="text" id="userName"><br/>
+PassWord:<input type="password" id="passWord"><br/>
+<input type="button" onclick="userName()" value="Dang nhap"><br/>
+<!--Chuyển câu điều kiện về switch case-->
+<b>Câu điều kiện switch case</b>
+Nhập giá trị:<input type="text" id="hienThiSo">
+<input type="button" onclick="hienThiSo()" value="Hiển thị"><br/>
+<!--Hiển thị một số-->
+<b>Câu điều kiện</b>
+Nhập giá trị:<input type="text" id="hienThiSo1">
+<input type="button" onclick="hienThiSo1()" value="Hiển thị"><br/>
+<!--Toán tử 3 ngôi-->
+<b>Toán tử 3 ngôi</b>
+Nhập giá trị:<input type="text" id="nhapa">
+<input type="text" id="nhapb">
+<button onclick="soSanh()">So sánh</button>
+<script>
+    // Test lần 1
+    function Contens() {
+        let year = parseInt(document.getElementById('enterTheYear').value);
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    alert(year + "is a leap year ")
+                } else {
+                    alert(year + "is not a leap year")
+                }
+            } else {
+                alert(year + "is a leap year")
+            }
+        } else {
+            alert(year + "is not a leap year")
+        }
+    }
+
+    //Test lần 2
+    function Contens2() {
+        let year2 = parseInt(document.getElementById('enterTheYear2').value);
+        let isWhat = false;
+        if (year2 % 4 == 0) {
+            if (year2 % 100 == 0) {
+                if (year2 % 400 == 0) {
+                    isWhat = true;
+                } else {
+                    isWhat = false;
+                }
+            } else {
+                isWhat = true;
+            }
+            if (isWhat) {
+                alert(year2 + "is a leap year");
+            } else {
+                alert(year2 + "is not a leap year");
+            }
+        }
+    }
+
+    // Test lần 3
+    function giatri() {
+        let giatri = document.getElementById("whatIsThe").value;
+        if (giatri == 'ECMAScript') {
+            alert('Right!');
+        } else {
+            alert("Didn’t know? ECMAScript!");
+        }
+    }
+
+    // Test lần 4
+    function userName() {
+        let userName = document.getElementById('userName').value;
+        let passWord = document.getElementById('passWord').value;
+        if (userName == 'Admin' && passWord == 'TheMaster') {
+            document.write('Welcome');
+        } else if (userName == 'Admin' && passWord == 'null') {
+            document.write('Canceled');
+        } else if (userName == 'null') {
+            document.write('canceld');
+        } else {
+            document.write('I don’t know you');
+        }
+    }
+
+    // Chuyển câu điều kiện về switch case
+    function hienThiSo() {
+        let a = document.getElementById('hienThiSo').value;
+
+        switch (a) {
+            case '0':
+                alert('0');
+                break;
+            case '1':
+                alert('1');
+                break;
+            case '2':
+            case '3':
+                alert('2, 3');
+                break;
+        }
+    }
+
+    // Hiển thị một số
+    function hienThiSo1() {
+        let so1 = document.getElementById('hienThiSo1').value;
+        if (so1 > 0) {
+            alert('Hiển thị: 1');
+        } else if (so1 < 0) {
+            alert('Hiển thị: -1');
+        } else {
+            alert('Hiển thi: 0');
+        }
+    }
+
+    function soSanh() {
+        let a = parseFloat(document.getElementById('nhapa').value);
+        let b = parseFloat(document.getElementById('nhapb').value);
+        let result12 = (a + b < 4) ? 'Below' : 'Over';
+        alert(result12);
+    }
+</script>
+</body>
+</html>
